@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/drobb2020/django-tasker">
-    <img src="static/assets/logo.png" alt="Logo" height="100">
+    <img src="static/images/logo.png" alt="Logo" height="100">
   </a>
 
 <h3 align="center">Django Todo Project</h3>
