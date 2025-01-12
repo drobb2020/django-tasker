@@ -21,6 +21,8 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Facebook][facebook-shield]][facebook-url]
+[![instagram][instagram-shield]][instagram-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -194,5 +196,9 @@ Project Link: [https://github.com/drobb2020/django-tasker](https://github.com/dr
 [license-shield]: https://img.shields.io/github/license/drobb2020/django-tasker.svg?style=for-the-badge
 [license-url]: https://github.com/drobb2020/django-tasker/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/david-robb-42436a20/
+[facebook-shield]: https://img.shields.io/badge/-Facebook-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[facebook-url]: https://www.facebook.com/david.robb.2012/
+[instagram-shield]: https://img.shields.io/badge/-Instagram-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[instagram-url]: https://www.instagram.com/davidrobb169/
 [product-screenshot]: ./static/images/screenshot.png
