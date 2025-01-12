@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}| Register{% endblock title %}
+
+{% block content %}
+
+<div class="text-center">
+    <h1><i class="fa-regular fa-user-plus"></i> Register for a Free Account</h1>
+</div>
+
+<div class="container rounded bg-light shadow border mt-4 p-4" style="max-width: 40rem">
+    <form action="" method="post" autocomplete="off">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-primary w-100" type="submit">Sign up</button>
+    </form>
+    <p class="mt-4">Already have an account? <a href="{% url 'my-login' %}">Sign in here!</a></p>
+</div>
+
+{% endblock content %}

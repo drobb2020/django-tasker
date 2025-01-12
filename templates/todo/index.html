@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}| Home{% endblock title %}
+
+{% block content %}
+
+<h1><i class="fa-regular fa-hand-wave"></i> Welcome to Tasker</h1>
+<img src="{% static 'images/todo_bg-2.jpg' %}" alt="To Do List" class="img-fluid border border-1 shadow p-3 bg-light">
+<p class="mt-3"><strong>Your daily reminder of what to do!</strong></p>
+
+{% endblock content %}

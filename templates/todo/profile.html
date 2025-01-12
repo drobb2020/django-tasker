@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}| Profile{% endblock title %}
+
+{% block content %}
+
+<div class="text-center">
+    <h1>{{ user.first_name|title }} {{ user.last_name|title }}'s Profile</h1>
+</div>
+
+<div class="container rounded bg-light shadow border mt-4 p-4 text-center" style="max-width: 40rem;">
+    {% if user.profile.avatar %}
+        <img src="{{ user.profile.avatar.url }}" alt="My profile image" style="height: 200px;">
+    {% else %}
+        <img src="{% static 'images/avatar-200.jpg' %}" class="img-thumbnail rounded-circle mx-auto d-block" alt="Default avatar">
+    {% endif %}
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <p class="d-inline"><i class="fa-light fa-envelope fa-2xl"></i> {{ user.profile.email }}</p>
+        </div>
+        <div class="col md-6">
+            <p class="d-inline"><i class="fa-light fa-phone fa-2xl"></i> {{ user.profile.phone }}</p>
+        </div>
+    </div>
+    <hr class="border border-primary border-1 opacity-25">
+    <h2 class="mt-4">Bio: </h2>
+    <blockquote class="blockquote">
+      <p class="mb-0">{{ user.profile.bio }}</p>
+    </blockquote>
+    <hr class="border border-primary border-1 opacity-25">
+    <h2 class="my-2">Favorite Quote: </h2>
+    <figure>
+      <blockquote class="blockquote">
+        <p class="mb-0">{{ user.profile.favorite_quote }}</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        {{ user.profile.quote_author }}, <cite title="Source Title">{{ user.profile.quote_source }}</cite>
+      </figcaption>
+    </figure>
+    <hr class="border border-primary border-1 opacity-25">
+    <div class="text-center mx-auto" style="max-width: 30rem;">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{{ user.profile.social_facebook }}" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ user.profile.social_linkedin }}" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            </div>
+            <div class="row col-md-4">
+                <a href="{{ user.profile.social_github }}" target="_blank"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row text-center mx-auto mt-4" style="max-width: 40rem;">
+    <div class="col-md-6">
+        <a href="{% url 'profile-update' %}" class="btn btn-lg btn-secondary shadow-lg">Update Your Profile</a>
+    </div>
+    <div class="col-md-6">
+        <a href="{% url 'profile-delete' %}" class="btn btn-lg btn-danger shadow-lg">Delete Your Profile</a>
+    </div>
+</div>
+
+{% endblock content %}

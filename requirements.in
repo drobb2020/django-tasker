@@ -1,0 +1,7 @@
+crispy-bootstrap5==2024.10
+Django==5.1.4
+django-crispy-forms==2.3
+django-extensions==3.2.3
+django-phonenumber-field==8.0.0
+phonenumberslite==8.13.52
+Pillow==11.1.0

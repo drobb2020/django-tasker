@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}| Delete{% endblock title %}
+
+{% block content %}
+
+<h1><i class="fa-solid fa-trash-can-plus"></i> Delete Task!</h1>
+
+<div class="shadow border p-3 mb-3" style="max-width: 45rem;">
+    <form action="" method="post">
+        {% csrf_token %}
+        <p class="lead">Are you sure you want to delete <strong>"{{ task }}"</strong> task?</p>
+        <input class="btn btn-danger" type="submit" value="Delete">
+        <a href="{% url 'dashboard' %}" class="btn btn-primary">Cancel</a>
+    </form>
+</div>
+
+{% endblock content %}

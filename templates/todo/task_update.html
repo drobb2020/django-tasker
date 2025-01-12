@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}| Update{% endblock title %}
+
+{% block content %}
+
+<h1><i class="fa-solid fa-pen-to-square fa-lg"></i> Update task!</h1>
+
+<div class="container rounded bg-light shadow border mt-4 p-4">
+    <form action="" method="post" autocomplete="off">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-lg btn-success w-100" type="submit">Update</button>
+    </form>
+</div>
+
+{% endblock content %}

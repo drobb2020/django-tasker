@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block title %}| Login{% endblock title %} 
+
+{% block content %}
+
+<div class="text-center">
+  <h1><i class="fa-regular fa-right-to-bracket"></i> Login to Tasker to get started!</h1>
+</div>
+
+<div class="container rounded bg-light shadow border mt-4 p-4" style="max-width: 40rem">
+  <form action="" method="post" autocomplete="off">
+    {% csrf_token %} {{ form|crispy }}
+    <button class="btn btn-primary w-100" type="submit">Sign in</button>
+  </form>
+  <p class="mt-4">
+    Don't have an account? <a href="{% url 'register' %}">Sign up here!</a>
+  </p>
+  <p>Forgot your Password? <a href="#">Change it here!</a></p>
+</div>
+
+{% endblock content %}

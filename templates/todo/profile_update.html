@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}| Profile Update{% endblock title %}
+
+{% block content %}
+
+<h1><i class="fa-regular fa-user-pen fa-2xl"></i> Update Your Profile!</h1>
+
+<div class="container rounded bg-light shadow border mt-4 p-4">
+    <form action="" method="post" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-lg btn-success w-100" type="submit">Update</button>
+    </form>
+</div>
+
+{% endblock content %}

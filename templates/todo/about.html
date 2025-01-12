@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}| About{% endblock title %}
+
+{% block content %}
+
+<div class="mb-5">
+    <h1><img src="{% static 'images/logo.png' %}" alt="Excession Development" class="img-fluid" style="max-width: 4rem;"> About Excession Development</h1>
+    <p class="lead">Excession Development is a small company that specializes in web development using Python and Django.</p>
+    <h2 class="my-3">
+        Why Excession
+      </h2>
+      <p>Excession by Iain M. Banks is one of my favorite Science-fiction books. I think that handling situations that do not fit normal parameters is an important skill in all walks of life.</p>
+      <p class="lead mt-3 mb-5">
+        An out of context problem or event - something that is so large or different from normal that it causes a system or society to change in a fundamental way. Originally defined by author Iain M Banks and used as the title of a novel.<br />
+        The corona virus is an excession. Now governments will consider giving money directly to the people instead of taxing them, as without the support everything we do will fail.
+      </p>
+</div>
+
+
+<h1><i class="fa-regular fa-circle-info"></i> About Tasker</h1>
+<p class="lead">
+    This is an enhanced todo/task list for multiple users. It comes complete with a dashboard for easy identification of what still needs to be done.
+</p>
+<h2>Built With...</h2>
+<h3>Production Packages</h3>
+<ul class="list-unstyled">
+    <li>crispy-bootstrap5==2024.10</li>
+    <li>Django==5.1.4</li>
+    <li>django-crispy-forms==2.3</li>
+    <li>django-extensions==3.2.3</li>
+    <li>django-phonenumber-field==8.0.0</li>
+    <li>phonenumberslite==8.13.52</li>
+    <li>Pillow==11.1.0</li>
+</ul>
+<h3>Development Packages</h3>
+<ul class="list-unstyled">
+    <li>black==24.10.0</li>
+    <li>ruff==0.9.1</li>
+</ul>
+
+{% endblock content %}
